@@ -2,6 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const userRoutes = require("./app/routes/user_routes");
 const { swaggerUi, swaggerSpec } = require("./swaggerConfig");
+const productRoutes = require("./app/routes/product_routes");
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -19,6 +20,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 app.use("/api/users", userRoutes);
+app.use("/api/products", productRoutes);
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
