@@ -5,7 +5,7 @@ const swaggerUi = require("swagger-ui-express");
 const swaggerDefinition = {
   openapi: "3.0.0",
   info: {
-    title: "User API Documentation",
+    title: "Nector API",
     version: "1.0.0",
     description: "API documentation for user management and authentication",
     contact: {

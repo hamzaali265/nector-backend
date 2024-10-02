@@ -23,7 +23,6 @@ const router = express.Router();
  *       content:
  *         application/json:
  *           schema:
- *
  *             properties:
  *               name:
  *                 type: string
